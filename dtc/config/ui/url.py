@@ -11,16 +11,16 @@ from dtc.handlers.lookup_handler import LookupHandler
 
 # We used several simpler rules, rather than more ambiguous RXs.
 urls = (
-    '^/favicon.ico$', 'static_favicon',
+#    '^/favicon.ico$', 'static_favicon',
     '^/$', 'index',
 
     '/lookup/([^/]+)(/(.+))?', 'lookup',
     '/(.*)', 'fail',
 )
 
-class favicon:
-    def GET(self):
-        raise web.seeother('/static/images/favicon.ico')
+#class favicon:
+#    def GET(self):
+#        raise web.seeother('/static/images/favicon.ico')
 
 class index:
     def __init__(self):
@@ -44,7 +44,7 @@ class index:
     def GET(self):
         return self.__get_content()
 
-mapping = { 'static_favicon': favicon,
+mapping = { #'static_favicon': favicon,
             'index': index,
             'fail': handlers.Fail,
             'lookup': LookupHandler,
