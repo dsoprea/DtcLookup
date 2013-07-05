@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Diagnostic Trouble Code (DTC) Lookup</title>
+        <style type="text/css">
+        #footer { margin-top: 50px; margin-bottom: 10px; font-size: .9em; border-top: 1px solid black; padding-top: 5px; }
+        </style>    
+    </head>
+    <body>
+<div id="banner">
+    <h1>Diagnostic Trouble Code (DTC) Lookup</h1>
+</div>
+<div id="description">
+    <h2>Description</h2>
+    <div class="text">
+This website is a simple lookup utility for SAE (automotive) DTC codes. It can be accessed by hand, but is intended to be implemented by software utilities as a tool to produce meaningful messages from codes read from vehicles via OBDII diagnostic hardware. 
+    </div>
+</div>
+<div id="usage">
+    <h2>Usage</h2>
+    <div class="text">
+<pre>%(UrlPrefix)s/lookup/dtc/code/&lt;code&gt;</pre>
+    </div>
+    <h2>Example</h2>
+    <div class="text">
+    <a href="%(UrlPrefix)s/lookup/dtc/code/P0442" target="_blank">%(UrlPrefix)s/lookup/dtc/code/P0442</a>
+    </div>
+</div>
+<div id="data-example">
+    <h2>Sample Result</h2>
+    <pre><div class="example">
+{ "Data": [["Generic", 
+            "Evaporative Emission Control System Leak Detected (small leak)"], 
+           ["Landrover", 
+            "Evap System Small Leak Detected Fault"]], 
+
+  "Error": null }
+    </div></pre>
+    <div class="explain">
+The result is a JSON-encoded dictionary with the members "Data" and "Error". "Data" is a list of lists, where the latter always has a length of two. The first item is a category (usually the make of the vehicle, or "Generic"), and the second is the description.<br /><br />If "Error" is not NULL, then an error occurred.
+    </div>
+</div>
+<div id="footer">
+This webpage runs using the <b><a href="https://github.com/dsoprea/DtcLookup">DtcLookup</a></b> project.
+</div>
+    </body>
+</html>
+
