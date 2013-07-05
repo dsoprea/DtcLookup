@@ -50,7 +50,7 @@ Sample Result
 Notes
 -----
 
-The dtcdatabase.com website runs using this project.
+The <a href="http://www.dtcdatabase.com">DTC Database</a> runs with this project.
 
-The DTC lists used for this project are courtesy of the "scantool" (http://www.scantool.net/downloads/archive/diagnostic-software) project.
+The DTC lists in this project come courtesy of the "scantool" (http://www.scantool.net/downloads/archive/diagnostic-software) project.
 
