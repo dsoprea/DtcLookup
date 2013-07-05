@@ -7,6 +7,18 @@ Description
     This website is a simple lookup utility for SAE (automotive) DTC codes. It can be accessed by hand, but is intended to be implemented by software utilities as a tool to produce meaningful messages from codes read from vehicles via OBDII diagnostic hardware.
 
 
+Requirements
+------------
+
+web.py
+
+
+Running the Server
+------------------
+
+PYTHONPATH=. dtc/tools/start_webserver.py
+
+
 Usage
 -----
 
